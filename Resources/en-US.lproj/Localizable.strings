@@ -1,0 +1,198 @@
+/* SeguraMinhasNotas — English (United States) */
+
+"SeguraMinhasNotas" = "SeguraMinhasNotas";
+"OK" = "OK";
+
+/* Options */
+"Esquerda" = "Left";
+"Direita" = "Right";
+"Ao passar o cursor" = "On hover";
+"Ao clicar" = "On click";
+"Rápida" = "Fast";
+"Equilibrada" = "Balanced";
+"Suave" = "Gentle";
+"Arredondada" = "Rounded";
+"Sistema" = "System";
+"Serifada" = "Serif";
+"Monoespaçada" = "Monospaced";
+"Sol" = "Sun";
+"Coral" = "Coral";
+"Menta" = "Mint";
+"Céu" = "Sky";
+"Lilás" = "Lilac";
+"Todas" = "All";
+"Ativas" = "Active";
+"Arquivadas" = "Archived";
+"Nota sem título" = "Untitled note";
+
+/* Authentication and errors */
+"Manter bloqueado" = "Keep Locked";
+"A autenticação deste Mac não está disponível." = "Authentication is not available on this Mac.";
+"Desbloqueie o conteúdo das suas notas." = "Unlock your note content.";
+"Não foi possível acessar a chave local (código %d)." = "Could not access the local key (code %d).";
+"O arquivo de notas está corrompido ou pertence a outra instalação." = "The notes file is corrupted or belongs to another installation.";
+"Escolha novamente a pasta de sincronização." = "Choose the sync folder again.";
+"Usar esta pasta" = "Use This Folder";
+
+/* Import and export */
+"Markdown (um arquivo por nota)" = "Markdown (one file per note)";
+"Texto simples (um arquivo por nota)" = "Plain text (one file per note)";
+"Um único documento" = "Single document";
+"Arquivo SeguraMinhasNotas (.seguranotas)" = "SeguraMinhasNotas archive (.seguranotas)";
+"Arquivo portátil (.stickies)" = "Portable archive (.stickies)";
+"O arquivo não contém notas em um formato reconhecido." = "The file does not contain notes in a recognized format.";
+"Nenhuma nota foi encontrada para importar." = "No notes were found to import.";
+"Notas do SeguraMinhasNotas.md" = "SeguraMinhasNotas Notes.md";
+"Importar" = "Import";
+"Exportar" = "Export";
+"Escolha .seguranotas, .stickies, Markdown, texto, RTF ou pacotes RTFD do Stickies." = "Choose a .seguranotas, .stickies, Markdown, text, RTF, or Stickies RTFD package.";
+"Nota importada" = "Imported note";
+"Nota" = "Note";
+
+/* Welcome note and sample content */
+"Bem-vindo ao SeguraMinhasNotas" = "Welcome to SeguraMinhasNotas";
+"Leve o cursor até a borda da tela.\n\n☐ Clique em uma aba para escrever\n☐ Arraste para reorganizar\n☐ Use ⌥⌘N para criar uma nota" = "Move the pointer to the edge of the screen.\n\n☐ Click a tab to write\n☐ Drag to reorder\n☐ Press ⌥⌘N to create a note";
+"começar" = "get started";
+"Planejamento da semana" = "Weekly planning";
+"☑ Revisar prioridades\n☐ Preparar apresentação\n☐ Organizar próximas entregas\n\nFoco: avançar uma tarefa de cada vez." = "☑ Review priorities\n☐ Prepare presentation\n☐ Organize upcoming deliverables\n\nFocus: move forward one task at a time.";
+"trabalho" = "work";
+"semana" = "week";
+"Ideias para o projeto" = "Project ideas";
+"Simplificar o primeiro acesso\nOrganizar referências em um só lugar\nReservar tempo para revisar detalhes" = "Simplify the first steps\nKeep references in one place\nSet aside time to review details";
+"projeto" = "project";
+"ideias" = "ideas";
+"Lista de compras" = "Shopping list";
+"☑ Café\n☐ Frutas\n☐ Pão de queijo\n☐ Flores para a sala" = "☑ Coffee\n☐ Fruit\n☐ Cheese bread\n☐ Flowers for the living room";
+"casa" = "home";
+"Leituras para depois" = "Read later";
+"leitura" = "reading";
+"Viagem de fim de semana" = "Weekend trip";
+"☑ Reservar hospedagem\n☐ Separar documentos\n☐ Montar roteiro\n☐ Conferir a previsão do tempo" = "☑ Book accommodations\n☐ Gather documents\n☐ Plan the itinerary\n☐ Check the weather forecast";
+"viagem" = "travel";
+"planejamento" = "planning";
+"Referências visuais" = "Visual references";
+"Paleta de cores\nTipografia\nComposição\nFotografia" = "Color palette\nTypography\nComposition\nPhotography";
+
+/* Onboarding */
+"Suas notas esperam na borda" = "Your notes wait at the edge";
+"Em repouso, apenas pequenos traços coloridos ficam visíveis. Leve o cursor até eles quando precisar." = "At rest, only small colored tabs remain visible. Move the pointer to them when you need a note.";
+"Um gesto abre o baralho" = "One gesture opens the deck";
+"As notas se espalham em cascata. Passe sobre uma aba para espiar ou clique para escrever." = "The notes fan out in a cascade. Hover over a tab to peek or click to write.";
+"Escreva onde ela já está" = "Write right where it is";
+"A nota vira um editor flutuante e salva 250 ms depois de você parar de digitar." = "The note becomes a floating editor and saves 250 ms after you stop typing.";
+"Arquive sem perder" = "Archive without losing anything";
+"⌥⌘A reúne tudo; ⌥⌘L abre o arquivo; ⌥⌘N cria uma nota de qualquer lugar." = "⌥⌘A gathers everything; ⌥⌘L opens the archive; ⌥⌘N creates a note from anywhere.";
+"Voltar" = "Back";
+"Criar minha primeira nota" = "Create My First Note";
+"Continuar" = "Continue";
+
+/* Editor and protected content */
+"Fechar nota (⌘W)" = "Close note (⌘W)";
+"Título" = "Title";
+"Arraste a nota pela barra superior" = "Drag the note by its top bar";
+"Desafixar da mesa" = "Unpin from Desktop";
+"Fixar na mesa" = "Pin to Desktop";
+"tags separadas por vírgula" = "comma-separated tags";
+"Adicionar item de checklist" = "Add checklist item";
+"salva automaticamente" = "saves automatically";
+"Arquivar" = "Archive";
+"Fechar" = "Close";
+"Conteúdo protegido" = "Protected Content";
+"Use Touch ID, Apple Watch ou a senha deste Mac." = "Use Touch ID, Apple Watch, or this Mac’s password.";
+"Autenticando…" = "Authenticating…";
+"Desbloquear" = "Unlock";
+"Notas protegidas" = "Protected Notes";
+"Use Touch ID, Apple Watch ou a senha deste Mac para continuar." = "Use Touch ID, Apple Watch, or this Mac’s password to continue.";
+
+/* Edge deck */
+"+%d nota" = "+%d note";
+"+%d notas" = "+%d notes";
+"NOTA" = "NOTE";
+"Conteúdo oculto" = "Hidden Content";
+"Autentique-se para ler" = "Authenticate to read";
+"Nova nota" = "New Note";
+"Todas as notas" = "All Notes";
+"Arquivo" = "Archive";
+"Manter baralho aberto" = "Keep Deck Open";
+"Mostrar sobre tela cheia" = "Show Over Full Screen";
+"Lado da tela" = "Screen Side";
+"Ajustes…" = "Settings…";
+"Encerrar SeguraMinhasNotas" = "Quit SeguraMinhasNotas";
+
+/* All notes */
+"Importar…" = "Import…";
+"Buscar em títulos, textos e tags" = "Search titles, text, and tags";
+"Filtro" = "Filter";
+"Nenhuma nota" = "No Notes";
+"Nada encontrado" = "No Results";
+"Crie uma nota na borda da tela." = "Create a note at the edge of the screen.";
+"Tente outro termo de busca." = "Try a different search term.";
+"Selecione notas para exportar" = "Select notes to export";
+"%d nota selecionada" = "%d note selected";
+"%d notas selecionadas" = "%d notes selected";
+"ARQUIVADA" = "ARCHIVED";
+"ATIVA" = "ACTIVE";
+"Sem conteúdo" = "No content";
+"ATIVA · NA BORDA" = "ACTIVE · AT EDGE";
+"Abrir" = "Open";
+"Restaurar" = "Restore";
+"Apagar" = "Delete";
+"Esta nota está vazia." = "This note is empty.";
+"Criada em %@ · atualizada %@" = "Created %@ · updated %@";
+"Selecione uma nota" = "Select a Note";
+"Escolha uma nota na lista para ver a prévia." = "Choose a note from the list to see its preview.";
+"“%@” foi apagada" = "“%@” was deleted";
+"Desfazer" = "Undo";
+"%d nota importada." = "%d note imported.";
+"%d notas importadas." = "%d notes imported.";
+
+/* Settings */
+"Geral" = "General";
+"Aparência" = "Appearance";
+"Sincronização" = "Sync";
+"Privacidade" = "Privacy";
+"Sobre" = "About";
+"Como o baralho aparece e se comporta." = "How the deck looks and behaves.";
+"Abrir automaticamente ao ligar o Mac" = "Open automatically when you start your Mac";
+"O macOS aguarda sua aprovação nos Itens de Início." = "macOS is waiting for your approval in Login Items.";
+"Abrir Ajustes do Sistema" = "Open System Settings";
+"Mostrar sobre aplicativos em tela cheia" = "Show over full-screen apps";
+"Mantém o SeguraMinhasNotas acessível em todos os Spaces." = "Keeps SeguraMinhasNotas available in every Space.";
+"Manter o baralho aberto" = "Keep the deck open";
+"As abas permanecem visíveis em vez de descansarem como pequenos traços." = "The tabs remain visible instead of resting as small slivers.";
+"Abrir uma nota" = "Open a Note";
+"Velocidade" = "Speed";
+"A voz visual das suas notas." = "The visual voice of your notes.";
+"Fonte" = "Font";
+"Tamanho" = "Size";
+"Prévia" = "Preview";
+"Ideias ficam mais leves quando moram perto." = "Ideas feel lighter when they live nearby.";
+"A mesma pilha em todos os seus Macs, usando uma pasta sua." = "The same stack on all your Macs, using a folder you control.";
+"Sincronizar por pasta" = "Sync Using a Folder";
+"Nenhuma pasta escolhida" = "No folder selected";
+"Um arquivo `.seguranota` legível por nota. Use iCloud Drive, Dropbox ou qualquer pasta sincronizada." = "One readable `.seguranota` file per note. Use iCloud Drive, Dropbox, or any synced folder.";
+"Escolher pasta…" = "Choose Folder…";
+"Trocar pasta…" = "Change Folder…";
+"Sincronizar agora" = "Sync Now";
+"Última sincronização %@" = "Last synced %@";
+"Local primeiro, sem conta e sem telemetria." = "Local first, with no account or telemetry.";
+"Ocultar o conteúdo quando a tela estiver bloqueada" = "Hide content when the screen is locked";
+"Exigir Touch ID, Apple Watch ou senha" = "Require Touch ID, Apple Watch, or password";
+"Conteúdo desbloqueado" = "Content Unlocked";
+"Conteúdo bloqueado" = "Content Locked";
+"Bloquear agora" = "Lock Now";
+"Criptografia local" = "Local Encryption";
+"AES-GCM; a chave fica nas Chaves do macOS." = "AES-GCM; the key stays in the macOS Keychain.";
+"Armazenamento" = "Storage";
+"Rede" = "Network";
+"Somente atualizações assinadas e a pasta de sincronização escolhida por você." = "Only signed updates and the sync folder you choose.";
+"Permissões" = "Permissions";
+"Sem Acessibilidade, gravação de tela ou monitoramento de entrada." = "No Accessibility, screen recording, or input-monitoring access.";
+"Notas rápidas que moram na borda do Mac." = "Quick notes that live at the edge of your Mac.";
+"Versão 0.2.0" = "Version 0.2.0";
+"Software livre sob a licença MIT." = "Free and open-source software under the MIT License.";
+"Buscar atualizações automaticamente" = "Automatically check for updates";
+"Baixar e instalar atualizações automaticamente" = "Automatically download and install updates";
+"Buscar atualizações agora…" = "Check for Updates Now…";
+"Código-fonte e documentação" = "Source Code and Documentation";
+"Ajustes do SeguraMinhasNotas" = "SeguraMinhasNotas Settings";

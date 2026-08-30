@@ -1,0 +1,9 @@
+/*
+ SeguraMinhasNotas — Português (Brasil)
+
+ As chaves do catálogo são os próprios textos em português brasileiro.
+ Quando uma entrada não precisa de adaptação, L10n usa a chave como valor.
+*/
+
+"SeguraMinhasNotas" = "SeguraMinhasNotas";
+"OK" = "OK";

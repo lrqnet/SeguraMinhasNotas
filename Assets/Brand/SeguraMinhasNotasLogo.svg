@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 260" role="img" aria-labelledby="title description">
+  <title id="title">Logotipo SeguraMinhasNotas</title>
+  <desc id="description">Um baralho de notas coloridas ao lado do nome SeguraMinhasNotas.</desc>
+  <defs>
+    <linearGradient id="logo-background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B2D39"/>
+      <stop offset="1" stop-color="#111218"/>
+    </linearGradient>
+    <filter id="logo-shadow" x="-30%" y="-30%" width="170%" height="190%">
+      <feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#000000" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <rect x="22" y="22" width="216" height="216" rx="50" fill="url(#logo-background)"/>
+  <g filter="url(#logo-shadow)" transform="translate(9 2)">
+    <rect x="91" y="67" width="116" height="105" rx="18" fill="#8BC6FA"/>
+    <rect x="75" y="83" width="116" height="105" rx="18" fill="#93DFC1"/>
+    <rect x="59" y="99" width="116" height="105" rx="18" fill="#FFD452"/>
+    <path d="M59 99h27v105H59c-10 0-18-8-18-18v-69c0-10 8-18 18-18z" fill="#F3B92F"/>
+    <path d="M86 108v87" stroke="#342E1C" stroke-opacity=".2" stroke-width="3" stroke-dasharray="5 5"/>
+    <path d="M106 132h50M106 151h42M106 170h47" stroke="#342E1C" stroke-opacity=".72" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <text x="284" y="128" fill="#18191F" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="66" font-weight="750" letter-spacing="-2.8">SeguraMinhasNotas</text>
+  <text x="288" y="174" fill="#666A75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="520" letter-spacing=".5">notas rápidas na borda do Mac</text>
+  <g transform="translate(288 196)">
+    <rect width="10" height="10" rx="5" fill="#FFD452"/>
+    <rect x="18" width="10" height="10" rx="5" fill="#FF9178"/>
+    <rect x="36" width="10" height="10" rx="5" fill="#93DFC1"/>
+    <rect x="54" width="10" height="10" rx="5" fill="#8BC6FA"/>
+    <rect x="72" width="10" height="10" rx="5" fill="#BFA8F5"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserstate
+
+# Credenciais e configuração local
+.env
+.env.*
+!.env.example
+.secrets/
+secrets.*
+credentials.*
+Secrets.xcconfig
+*.pem
+*.key
+*.p8
+*.p12
+*.mobileprovision
+*.provisionprofile
+
+# Instruções locais
+AGENTS.md

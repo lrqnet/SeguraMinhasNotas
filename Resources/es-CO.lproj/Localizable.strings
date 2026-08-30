@@ -1,0 +1,198 @@
+/* SeguraMinhasNotas — Español (Colombia) */
+
+"SeguraMinhasNotas" = "SeguraMinhasNotas";
+"OK" = "Aceptar";
+
+/* Opciones */
+"Esquerda" = "Izquierda";
+"Direita" = "Derecha";
+"Ao passar o cursor" = "Al pasar el cursor";
+"Ao clicar" = "Al hacer clic";
+"Rápida" = "Rápida";
+"Equilibrada" = "Equilibrada";
+"Suave" = "Suave";
+"Arredondada" = "Redondeada";
+"Sistema" = "Sistema";
+"Serifada" = "Con serifas";
+"Monoespaçada" = "Monoespaciada";
+"Sol" = "Sol";
+"Coral" = "Coral";
+"Menta" = "Menta";
+"Céu" = "Cielo";
+"Lilás" = "Lila";
+"Todas" = "Todas";
+"Ativas" = "Activas";
+"Arquivadas" = "Archivadas";
+"Nota sem título" = "Nota sin título";
+
+/* Autenticación y errores */
+"Manter bloqueado" = "Mantener bloqueado";
+"A autenticação deste Mac não está disponível." = "La autenticación no está disponible en este Mac.";
+"Desbloqueie o conteúdo das suas notas." = "Desbloquea el contenido de tus notas.";
+"Não foi possível acessar a chave local (código %d)." = "No se pudo acceder a la clave local (código %d).";
+"O arquivo de notas está corrompido ou pertence a outra instalação." = "El archivo de notas está dañado o pertenece a otra instalación.";
+"Escolha novamente a pasta de sincronização." = "Vuelve a elegir la carpeta de sincronización.";
+"Usar esta pasta" = "Usar esta carpeta";
+
+/* Importación y exportación */
+"Markdown (um arquivo por nota)" = "Markdown (un archivo por nota)";
+"Texto simples (um arquivo por nota)" = "Texto simple (un archivo por nota)";
+"Um único documento" = "Un solo documento";
+"Arquivo SeguraMinhasNotas (.seguranotas)" = "Archivo de SeguraMinhasNotas (.seguranotas)";
+"Arquivo portátil (.stickies)" = "Archivo portátil (.stickies)";
+"O arquivo não contém notas em um formato reconhecido." = "El archivo no contiene notas en un formato reconocido.";
+"Nenhuma nota foi encontrada para importar." = "No se encontraron notas para importar.";
+"Notas do SeguraMinhasNotas.md" = "Notas de SeguraMinhasNotas.md";
+"Importar" = "Importar";
+"Exportar" = "Exportar";
+"Escolha .seguranotas, .stickies, Markdown, texto, RTF ou pacotes RTFD do Stickies." = "Elige un archivo .seguranotas, .stickies, Markdown, de texto, RTF o un paquete RTFD de Stickies.";
+"Nota importada" = "Nota importada";
+"Nota" = "Nota";
+
+/* Nota de bienvenida y contenido de ejemplo */
+"Bem-vindo ao SeguraMinhasNotas" = "Te damos la bienvenida a SeguraMinhasNotas";
+"Leve o cursor até a borda da tela.\n\n☐ Clique em uma aba para escrever\n☐ Arraste para reorganizar\n☐ Use ⌥⌘N para criar uma nota" = "Lleva el cursor al borde de la pantalla.\n\n☐ Haz clic en una pestaña para escribir\n☐ Arrastra para reorganizar\n☐ Usa ⌥⌘N para crear una nota";
+"começar" = "comenzar";
+"Planejamento da semana" = "Planeación de la semana";
+"☑ Revisar prioridades\n☐ Preparar apresentação\n☐ Organizar próximas entregas\n\nFoco: avançar uma tarefa de cada vez." = "☑ Revisar prioridades\n☐ Preparar la presentación\n☐ Organizar las próximas entregas\n\nEnfoque: avanzar una tarea a la vez.";
+"trabalho" = "trabajo";
+"semana" = "semana";
+"Ideias para o projeto" = "Ideas para el proyecto";
+"Simplificar o primeiro acesso\nOrganizar referências em um só lugar\nReservar tempo para revisar detalhes" = "Simplificar los primeros pasos\nOrganizar las referencias en un solo lugar\nReservar tiempo para revisar los detalles";
+"projeto" = "proyecto";
+"ideias" = "ideas";
+"Lista de compras" = "Lista de compras";
+"☑ Café\n☐ Frutas\n☐ Pão de queijo\n☐ Flores para a sala" = "☑ Café\n☐ Frutas\n☐ Pan de queso\n☐ Flores para la sala";
+"casa" = "casa";
+"Leituras para depois" = "Lecturas para después";
+"leitura" = "lectura";
+"Viagem de fim de semana" = "Viaje de fin de semana";
+"☑ Reservar hospedagem\n☐ Separar documentos\n☐ Montar roteiro\n☐ Conferir a previsão do tempo" = "☑ Reservar el alojamiento\n☐ Separar los documentos\n☐ Preparar el itinerario\n☐ Consultar el pronóstico del tiempo";
+"viagem" = "viaje";
+"planejamento" = "planeación";
+"Referências visuais" = "Referencias visuales";
+"Paleta de cores\nTipografia\nComposição\nFotografia" = "Paleta de colores\nTipografía\nComposición\nFotografía";
+
+/* Introducción */
+"Suas notas esperam na borda" = "Tus notas esperan en el borde";
+"Em repouso, apenas pequenos traços coloridos ficam visíveis. Leve o cursor até eles quando precisar." = "Cuando están en reposo, solo se ven pequeñas pestañas de colores. Lleva el cursor hasta ellas cuando las necesites.";
+"Um gesto abre o baralho" = "Un gesto abre el mazo";
+"As notas se espalham em cascata. Passe sobre uma aba para espiar ou clique para escrever." = "Las notas se despliegan en cascada. Pasa sobre una pestaña para mirar o haz clic para escribir.";
+"Escreva onde ela já está" = "Escribe donde ya está";
+"A nota vira um editor flutuante e salva 250 ms depois de você parar de digitar." = "La nota se convierte en un editor flotante y se guarda 250 ms después de que dejas de escribir.";
+"Arquive sem perder" = "Archiva sin perder nada";
+"⌥⌘A reúne tudo; ⌥⌘L abre o arquivo; ⌥⌘N cria uma nota de qualquer lugar." = "⌥⌘A reúne todo; ⌥⌘L abre el archivo; ⌥⌘N crea una nota desde cualquier lugar.";
+"Voltar" = "Atrás";
+"Criar minha primeira nota" = "Crear mi primera nota";
+"Continuar" = "Continuar";
+
+/* Editor y contenido protegido */
+"Fechar nota (⌘W)" = "Cerrar nota (⌘W)";
+"Título" = "Título";
+"Arraste a nota pela barra superior" = "Arrastra la nota desde la barra superior";
+"Desafixar da mesa" = "Desanclar del escritorio";
+"Fixar na mesa" = "Anclar al escritorio";
+"tags separadas por vírgula" = "etiquetas separadas por comas";
+"Adicionar item de checklist" = "Agregar elemento a la lista";
+"salva automaticamente" = "se guarda automáticamente";
+"Arquivar" = "Archivar";
+"Fechar" = "Cerrar";
+"Conteúdo protegido" = "Contenido protegido";
+"Use Touch ID, Apple Watch ou a senha deste Mac." = "Usa Touch ID, Apple Watch o la contraseña de este Mac.";
+"Autenticando…" = "Autenticando…";
+"Desbloquear" = "Desbloquear";
+"Notas protegidas" = "Notas protegidas";
+"Use Touch ID, Apple Watch ou a senha deste Mac para continuar." = "Usa Touch ID, Apple Watch o la contraseña de este Mac para continuar.";
+
+/* Mazo del borde */
+"+%d nota" = "+%d nota";
+"+%d notas" = "+%d notas";
+"NOTA" = "NOTA";
+"Conteúdo oculto" = "Contenido oculto";
+"Autentique-se para ler" = "Autentícate para leer";
+"Nova nota" = "Nueva nota";
+"Todas as notas" = "Todas las notas";
+"Arquivo" = "Archivo";
+"Manter baralho aberto" = "Mantener el mazo abierto";
+"Mostrar sobre tela cheia" = "Mostrar sobre pantalla completa";
+"Lado da tela" = "Lado de la pantalla";
+"Ajustes…" = "Configuración…";
+"Encerrar SeguraMinhasNotas" = "Salir de SeguraMinhasNotas";
+
+/* Todas las notas */
+"Importar…" = "Importar…";
+"Buscar em títulos, textos e tags" = "Buscar en títulos, textos y etiquetas";
+"Filtro" = "Filtro";
+"Nenhuma nota" = "No hay notas";
+"Nada encontrado" = "No se encontraron resultados";
+"Crie uma nota na borda da tela." = "Crea una nota en el borde de la pantalla.";
+"Tente outro termo de busca." = "Prueba con otro término de búsqueda.";
+"Selecione notas para exportar" = "Selecciona notas para exportar";
+"%d nota selecionada" = "%d nota seleccionada";
+"%d notas selecionadas" = "%d notas seleccionadas";
+"ARQUIVADA" = "ARCHIVADA";
+"ATIVA" = "ACTIVA";
+"Sem conteúdo" = "Sin contenido";
+"ATIVA · NA BORDA" = "ACTIVA · EN EL BORDE";
+"Abrir" = "Abrir";
+"Restaurar" = "Restaurar";
+"Apagar" = "Eliminar";
+"Esta nota está vazia." = "Esta nota está vacía.";
+"Criada em %@ · atualizada %@" = "Creada el %@ · actualizada %@";
+"Selecione uma nota" = "Selecciona una nota";
+"Escolha uma nota na lista para ver a prévia." = "Elige una nota de la lista para ver la vista previa.";
+"“%@” foi apagada" = "Se eliminó “%@”";
+"Desfazer" = "Deshacer";
+"%d nota importada." = "%d nota importada.";
+"%d notas importadas." = "%d notas importadas.";
+
+/* Configuración */
+"Geral" = "General";
+"Aparência" = "Apariencia";
+"Sincronização" = "Sincronización";
+"Privacidade" = "Privacidad";
+"Sobre" = "Acerca de";
+"Como o baralho aparece e se comporta." = "Cómo se ve y se comporta el mazo.";
+"Abrir automaticamente ao ligar o Mac" = "Abrir automáticamente al iniciar el Mac";
+"O macOS aguarda sua aprovação nos Itens de Início." = "macOS espera tu aprobación en los ítems de inicio de sesión.";
+"Abrir Ajustes do Sistema" = "Abrir Configuración del Sistema";
+"Mostrar sobre aplicativos em tela cheia" = "Mostrar sobre aplicaciones en pantalla completa";
+"Mantém o SeguraMinhasNotas acessível em todos os Spaces." = "Mantiene SeguraMinhasNotas disponible en todos los Spaces.";
+"Manter o baralho aberto" = "Mantener el mazo abierto";
+"As abas permanecem visíveis em vez de descansarem como pequenos traços." = "Las pestañas permanecen visibles en lugar de reducirse a pequeñas líneas.";
+"Abrir uma nota" = "Abrir una nota";
+"Velocidade" = "Velocidad";
+"A voz visual das suas notas." = "La voz visual de tus notas.";
+"Fonte" = "Fuente";
+"Tamanho" = "Tamaño";
+"Prévia" = "Vista previa";
+"Ideias ficam mais leves quando moram perto." = "Las ideas se sienten más ligeras cuando viven cerca.";
+"A mesma pilha em todos os seus Macs, usando uma pasta sua." = "La misma pila en todos tus Mac, usando una carpeta que controlas.";
+"Sincronizar por pasta" = "Sincronizar por carpeta";
+"Nenhuma pasta escolhida" = "No se eligió ninguna carpeta";
+"Um arquivo `.seguranota` legível por nota. Use iCloud Drive, Dropbox ou qualquer pasta sincronizada." = "Un archivo `.seguranota` legible por cada nota. Usa iCloud Drive, Dropbox o cualquier carpeta sincronizada.";
+"Escolher pasta…" = "Elegir carpeta…";
+"Trocar pasta…" = "Cambiar carpeta…";
+"Sincronizar agora" = "Sincronizar ahora";
+"Última sincronização %@" = "Última sincronización %@";
+"Local primeiro, sem conta e sem telemetria." = "Local primero, sin cuenta ni telemetría.";
+"Ocultar o conteúdo quando a tela estiver bloqueada" = "Ocultar el contenido cuando la pantalla esté bloqueada";
+"Exigir Touch ID, Apple Watch ou senha" = "Exigir Touch ID, Apple Watch o contraseña";
+"Conteúdo desbloqueado" = "Contenido desbloqueado";
+"Conteúdo bloqueado" = "Contenido bloqueado";
+"Bloquear agora" = "Bloquear ahora";
+"Criptografia local" = "Cifrado local";
+"AES-GCM; a chave fica nas Chaves do macOS." = "AES-GCM; la clave permanece en el Llavero de macOS.";
+"Armazenamento" = "Almacenamiento";
+"Rede" = "Red";
+"Somente atualizações assinadas e a pasta de sincronização escolhida por você." = "Solo las actualizaciones firmadas y la carpeta de sincronización que elijas.";
+"Permissões" = "Permisos";
+"Sem Acessibilidade, gravação de tela ou monitoramento de entrada." = "Sin acceso a Accesibilidad, grabación de pantalla ni monitoreo de entrada.";
+"Notas rápidas que moram na borda do Mac." = "Notas rápidas que viven en el borde del Mac.";
+"Versão 0.2.0" = "Versión 0.2.0";
+"Software livre sob a licença MIT." = "Software libre bajo la licencia MIT.";
+"Buscar atualizações automaticamente" = "Buscar actualizaciones automáticamente";
+"Baixar e instalar atualizações automaticamente" = "Descargar e instalar actualizaciones automáticamente";
+"Buscar atualizações agora…" = "Buscar actualizaciones ahora…";
+"Código-fonte e documentação" = "Código fuente y documentación";
+"Ajustes do SeguraMinhasNotas" = "Configuración de SeguraMinhasNotas";
