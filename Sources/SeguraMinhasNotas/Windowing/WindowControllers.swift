@@ -55,7 +55,7 @@ final class DeckCoordinator {
                     screen: screen,
                     store: store,
                     settings: settings,
-                    onOpen: { [weak self] id in self?.openNote(id: id) },
+                    onOpen: { [weak self] id, source in self?.openNote(id: id, from: source) },
                     onShowAll: { [weak self] filter in self?.showAllNotes(filter: filter) },
                     onShowSettings: { [weak self] in self?.showSettings() }
                 )
@@ -69,15 +69,15 @@ final class DeckCoordinator {
         panels.values.forEach { $0.refreshFrame(animated: true) }
     }
 
-    func openNote(id: UUID) {
+    func openNote(id: UUID, from source: CGRect? = nil) {
         guard store.note(id: id)?.isArchived == false else { return }
         if settings.requireAuthentication && !AuthenticationService.shared.isUnlocked {
             AuthenticationService.shared.unlock { [weak self] success in
-                if success { self?.openNote(id: id) }
+                if success { self?.openNote(id: id, from: source) }
             }
             return
         }
-        editorManager.open(id: id)
+        editorManager.open(id: id, from: source)
     }
 
     func createNote() {
@@ -138,13 +138,14 @@ private final class DeckPanelController: NSWindowController {
     private let store: NoteStore
     private let settings: AppSettings
     private var fanned = false
-    private let panelWidth: CGFloat = 340
+    private var previewing = false
+    private var resizeTask: Task<Void, Never>?
 
     init(
         screen: NSScreen,
         store: NoteStore,
         settings: AppSettings,
-        onOpen: @escaping (UUID) -> Void,
+        onOpen: @escaping (UUID, CGRect) -> Void,
         onShowAll: @escaping (NoteFilter) -> Void,
         onShowSettings: @escaping () -> Void
     ) {
@@ -167,23 +168,35 @@ private final class DeckPanelController: NSWindowController {
         panel.isReleasedWhenClosed = false
         panel.animationBehavior = .none
         panel.ignoresMouseEvents = false
+        panel.acceptsMouseMovedEvents = true
 
         super.init(window: panel)
 
         let root = DeckView(
             store: store,
             settings: settings,
-            onOpen: onOpen,
+            onOpen: { [weak self] id, rect in
+                guard let self, let window = self.window else { return }
+                let source = DeckLayout.screenRect(rect, window: window.frame, left: settings.deckSide == .left)
+                onOpen(id, source.intersection(self.targetScreen.visibleFrame))
+            },
             onShowAll: onShowAll,
             onShowSettings: onShowSettings,
-            onFanChanged: { [weak self] value in
+            onPresentationChanged: { [weak self] value, preview in
                 self?.fanned = value
+                self?.previewing = preview
                 self?.refreshFrame(animated: true)
             }
         )
-        panel.contentView = NSHostingView(rootView: root)
-        applyCollectionBehavior()
         refreshFrame(animated: false)
+        let hostingView = NSHostingView(rootView: root)
+        hostingView.sizingOptions = []
+        let container = NSView(frame: NSRect(origin: .zero, size: panel.frame.size))
+        hostingView.frame = container.bounds
+        hostingView.autoresizingMask = [.width, .height]
+        container.addSubview(hostingView)
+        panel.contentView = container
+        applyCollectionBehavior()
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -199,34 +212,46 @@ private final class DeckPanelController: NSWindowController {
 
     func settingsDidChange() {
         applyCollectionBehavior()
-        if settings.keepDeckOpen { fanned = true }
         refreshFrame(animated: true)
     }
 
     func refreshFrame(animated: Bool) {
         guard let window else { return }
+        resizeTask?.cancel()
         let count = max(1, min(store.visibleNotes.count, 8))
-        let height = min(max(CGFloat(count) * 76 + 72, 170), targetScreen.visibleFrame.height - 80)
-        let visibleWidth: CGFloat = (fanned || settings.keepDeckOpen) ? 126 : 17
-        let frame = targetScreen.frame
+        let expanded = fanned || settings.keepDeckOpen
+        let height = expanded
+            ? DeckLayout.height(count: count, available: targetScreen.visibleFrame.height)
+            : DeckLayout.restingHeight(count: store.visibleNotes.prefix(8).count)
+        let width = previewing ? DeckLayout.canvasWidth : ((fanned || settings.keepDeckOpen) ? DeckLayout.fannedWidth : DeckLayout.restingWidth)
+        let frame = targetScreen.visibleFrame
         let x: CGFloat
         if settings.deckSide == .right {
-            x = frame.maxX - visibleWidth
+            x = frame.maxX - DeckLayout.edgeInset - width
         } else {
-            x = frame.minX - panelWidth + visibleWidth
+            x = frame.minX + DeckLayout.edgeInset
         }
-        let y = min(max(targetScreen.visibleFrame.midY - height / 2, targetScreen.visibleFrame.minY + 20), targetScreen.visibleFrame.maxY - height - 20)
-        let target = NSRect(x: x, y: y, width: panelWidth, height: height)
+        let y = frame.midY - height / 2
+        let target = NSRect(x: x, y: y, width: width, height: height)
+        guard window.frame != target else { return }
 
-        guard animated else {
+        // Expand the viewport before moving cards. Contract after their spring settles.
+        // Its outer edge stays fixed; SwiftUI alone animates the visible content.
+        guard animated, width < window.frame.width || height < window.frame.height else {
             window.setFrame(target, display: true)
             return
         }
-        NSAnimationContext.runAnimationGroup { context in
-            context.duration = settings.motionSpeed.duration
-            context.timingFunction = CAMediaTimingFunction(controlPoints: 0.2, 0.88, 0.3, 1)
-            window.animator().setFrame(target, display: true)
+        let delay = NSWorkspace.shared.accessibilityDisplayShouldReduceMotion ? 0.13 : settings.motionSpeed.duration + 0.4
+        resizeTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(delay * 1_000_000_000))
+            guard !Task.isCancelled else { return }
+            self?.window?.setFrame(target, display: true)
         }
+    }
+
+    override func close() {
+        resizeTask?.cancel()
+        super.close()
     }
 
     private func applyCollectionBehavior() {
@@ -256,7 +281,7 @@ private final class EditorWindowManager: NSObject, NSWindowDelegate {
         self.settings = settings
     }
 
-    func open(id: UUID) {
+    func open(id: UUID, from source: CGRect? = nil) {
         guard let note = store.note(id: id), !note.isArchived else { return }
         if let existing = controllers[id]?.window {
             existing.makeKeyAndOrderFront(nil)
@@ -272,7 +297,7 @@ private final class EditorWindowManager: NSObject, NSWindowDelegate {
         )
         panel.isOpaque = false
         panel.backgroundColor = .clear
-        panel.hasShadow = false
+        panel.hasShadow = true
         panel.isFloatingPanel = true
         panel.level = .floating
         panel.hidesOnDeactivate = false
@@ -290,18 +315,43 @@ private final class EditorWindowManager: NSObject, NSWindowDelegate {
         }
         panel.contentView = NSHostingView(rootView: root)
 
-        if let storedFrame = UserDefaults.standard.string(forKey: "lastEditorFrame") {
+        if let source {
+            let screen = NSScreen.screens.first { $0.frame.contains(NSPoint(x: source.midX, y: source.midY)) } ?? NSScreen.main ?? NSScreen.screens[0]
+            let safeFrame = screen.visibleFrame.insetBy(dx: 24, dy: 24)
+            let x = settings.deckSide == .right ? source.maxX - panel.frame.width : source.minX
+            panel.setFrameOrigin(NSPoint(
+                x: min(max(x, safeFrame.minX), safeFrame.maxX - panel.frame.width),
+                y: min(max(source.maxY - panel.frame.height, safeFrame.minY), safeFrame.maxY - panel.frame.height)
+            ))
+        } else if !AppRuntime.isScreenshotMode, let storedFrame = UserDefaults.standard.string(forKey: "lastEditorFrame") {
             panel.setFrame(NSRectFromString(storedFrame), display: false)
         } else {
             position(panel, beside: NSScreen.main ?? NSScreen.screens[0])
         }
+        let destination = panel.frame
+        let animate = source != nil && !NSWorkspace.shared.accessibilityDisplayShouldReduceMotion
+        if animate, let source {
+            // Keep the editor's layout stable while moving out of the selected card.
+            panel.setFrameOrigin(NSPoint(x: destination.minX + (settings.deckSide == .right ? 36 : -36), y: source.maxY - destination.height))
+            panel.alphaValue = 0
+        }
         panel.makeKeyAndOrderFront(nil)
+        if animate {
+            NSAnimationContext.runAnimationGroup { context in
+                context.duration = settings.motionSpeed.duration + 0.06
+                context.timingFunction = CAMediaTimingFunction(controlPoints: 0.2, 0.88, 0.3, 1)
+                panel.animator().setFrame(destination, display: true)
+                panel.animator().alphaValue = 1
+            }
+        }
         NSApp.activate(ignoringOtherApps: true)
     }
 
     func close(id: UUID) {
         guard let controller = controllers.removeValue(forKey: id) else { return }
-        if let frame = controller.window?.frame { UserDefaults.standard.set(NSStringFromRect(frame), forKey: "lastEditorFrame") }
+        if !AppRuntime.isScreenshotMode, let frame = controller.window?.frame {
+            UserDefaults.standard.set(NSStringFromRect(frame), forKey: "lastEditorFrame")
+        }
         controller.window?.orderOut(nil)
         controller.close()
     }
@@ -319,6 +369,7 @@ private final class EditorWindowManager: NSObject, NSWindowDelegate {
     }
 
     func windowDidMove(_ notification: Notification) {
+        guard !AppRuntime.isScreenshotMode else { return }
         guard let window = notification.object as? NSWindow else { return }
         UserDefaults.standard.set(NSStringFromRect(window.frame), forKey: "lastEditorFrame")
     }

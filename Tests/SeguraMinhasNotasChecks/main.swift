@@ -67,4 +67,26 @@ for key in english.keys {
     expect(formatMarkers(in: key) == formatMarkers(in: spanish[key]!), "marcadores de formato devem ser preservados em espanhol: \(key)")
 }
 
-print("SeguraMinhasNotasChecks: 10 verificações funcionais e \(english.count) traduções por idioma passaram")
+for count in [0, 1, 5, 8] {
+    for available: CGFloat in [540, 768, 1080] {
+        let height = DeckLayout.height(count: count, available: available)
+        let layout = DeckLayout(count: count, height: height)
+        expect(height <= available - 40, "baralho deve caber na área útil")
+        expect(layout.controlsY + 19 <= height, "controles devem permanecer dentro da janela")
+        for index in 0..<max(1, count) {
+            let right = layout.cardFrame(index: index, expanded: true, preview: true, left: false)
+            let left = layout.cardFrame(index: index, expanded: true, preview: true, left: true)
+            expect(right.minX >= 24 && right.maxX <= DeckLayout.canvasWidth - 24, "prévia deve reservar espaço para sombras")
+            expect(right.maxY <= height - 40, "prévia inferior não deve sair da janela")
+            expect(left.minX == DeckLayout.canvasWidth - right.maxX, "lado esquerdo deve espelhar a geometria")
+        }
+    }
+}
+let localCard = CGRect(x: 36, y: 108, width: 320, height: 190)
+let viewport = CGRect(x: 1000, y: 80, width: 214, height: 610)
+let source = DeckLayout.screenRect(localCard, window: viewport, left: false)
+expect(source.minX == 850 && source.maxY == 582, "origem do editor deve converter os eixos da janela corretamente")
+let leftSource = DeckLayout.screenRect(localCard, window: viewport, left: true)
+expect(leftSource.minX == 1036 && leftSource.maxY == source.maxY, "origem no monitor esquerdo deve usar o início do viewport")
+
+print("SeguraMinhasNotasChecks: verificações funcionais, geometria em 12 configurações e \(english.count) traduções por idioma passaram")

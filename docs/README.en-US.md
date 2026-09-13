@@ -32,13 +32,21 @@ The onboarding flow introduces the edge gesture, the fanning deck, autosave, and
 
 | At rest | Fanned open |
 |---|---|
-| <img src="images/02-deck-resting.png" alt="Collapsed deck shown as small colored marks" width="340"> | <img src="images/03-deck-open.png" alt="Note deck fanned open at the edge" width="340"> |
+| <img src="images/02-deck-resting.png" alt="Collapsed deck shown as small colored marks" width="44"> | <img src="images/03-deck-open.png" alt="Note deck fanned open at the edge" height="400"> |
 
 - At rest, each note occupies only a small colored mark at the edge.
 - The deck can open on hover or click.
 - Up to eight cards are shown directly; additional notes remain available in the library.
 - You can keep the deck open, switch screen sides, and drag cards to reorder them.
 - Each display gets its own panel, and the app can follow every Space and full-screen app.
+
+### A preview that follows your pointer
+
+| Right side | Left side |
+|---|---|
+| <img src="images/12-deck-preview.png" alt="Note pulled forward for reading on the right side" width="360"> | <img src="images/13-deck-preview-left.png" alt="Note pulled forward for reading on the left side" width="360"> |
+
+Hover over a note to pull it into view and reveal a larger preview. Click to open the editor from that position. Soft shadows, slightly tilted cards, and coordinated transitions give the deck depth. Animations respect the macOS **Reduce motion** preference.
 
 ### Floating editor and checklists
 

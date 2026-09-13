@@ -17,6 +17,8 @@ SMN_SCENARIOS=(
   settings-privacy
   settings-about
   locked
+  deck-preview
+  deck-preview-left
 )
 
 SMN_FILES=(
@@ -31,6 +33,8 @@ SMN_FILES=(
   09-settings-privacy.png
   10-settings-about.png
   11-protected-notes.png
+  12-deck-preview.png
+  13-deck-preview-left.png
 )
 
 function smn_clear_launch_environment {

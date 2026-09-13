@@ -130,8 +130,8 @@ final class AppSettings: ObservableObject {
         isEphemeral = AppRuntime.isScreenshotMode
 
         if AppRuntime.isScreenshotMode {
-            deckSide = .right
-            fanMode = .click
+            deckSide = AppRuntime.screenshotScenario?.hasSuffix("-left") == true ? .left : .right
+            fanMode = AppRuntime.isInteractivePreview ? .hover : .click
             motionSpeed = .balanced
             keepDeckOpen = AppRuntime.keepsDeckOpenForScreenshot
             showOverFullScreen = true

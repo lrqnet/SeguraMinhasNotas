@@ -13,6 +13,7 @@ xcrun swiftc \
   -module-name SeguraMinhasNotasChecks \
   "Sources/SeguraMinhasNotas/Services/Localization.swift" \
   "Sources/SeguraMinhasNotas/Models/Note.swift" \
+  "Sources/SeguraMinhasNotas/Models/DeckLayout.swift" \
   "Sources/SeguraMinhasNotas/Services/ChecklistSyntax.swift" \
   "Tests/SeguraMinhasNotasChecks/main.swift" \
   -o ".build/SeguraMinhasNotasChecks"

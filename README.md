@@ -32,13 +32,21 @@ O onboarding apresenta o gesto da borda, a abertura do baralho, o editor com sal
 
 | Em repouso | Aberto em cascata |
 |---|---|
-| <img src="docs/images/02-deck-resting.png" alt="Baralho recolhido como pequenos traços coloridos" width="340"> | <img src="docs/images/03-deck-open.png" alt="Baralho de notas aberto na borda" width="340"> |
+| <img src="docs/images/02-deck-resting.png" alt="Baralho recolhido como pequenos traços coloridos" width="44"> | <img src="docs/images/03-deck-open.png" alt="Baralho de notas aberto na borda" height="400"> |
 
 - Em repouso, apenas um traço de cada nota ocupa a borda.
 - O baralho abre ao passar o cursor ou ao clicar, conforme a preferência.
 - Até oito cartões aparecem diretamente; o restante fica acessível pela biblioteca.
 - É possível manter o baralho aberto, trocar o lado da tela e arrastar cartões para reordenar.
 - Cada monitor recebe seu próprio painel e o app pode acompanhar todos os Spaces e apps em tela cheia.
+
+### Prévia que acompanha o cursor
+
+| Lado direito | Lado esquerdo |
+|---|---|
+| <img src="docs/images/12-deck-preview.png" alt="Nota destacada para leitura no lado direito" width="360"> | <img src="docs/images/13-deck-preview-left.png" alt="Nota destacada para leitura no lado esquerdo" width="360"> |
+
+Ao passar o cursor, a nota avança para dentro da tela e revela uma prévia maior. Um clique abre o editor a partir daquela posição. Sombras suaves, cartões levemente inclinados e transições coordenadas dão profundidade ao baralho. O movimento respeita a preferência **Reduzir movimento** do macOS.
 
 ### Editor flutuante e checklists
 

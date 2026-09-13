@@ -9,7 +9,7 @@ final class UpdateService: ObservableObject {
 
     private init() {
         controller = SPUStandardUpdaterController(
-            startingUpdater: true,
+            startingUpdater: !AppRuntime.isScreenshotMode,
             updaterDelegate: nil,
             userDriverDelegate: nil
         )

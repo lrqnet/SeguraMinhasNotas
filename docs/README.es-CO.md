@@ -32,13 +32,21 @@ La introducción explica el gesto del borde, el despliegue de la baraja, el guar
 
 | En reposo | Abierta en cascada |
 |---|---|
-| <img src="images/02-deck-resting.png" alt="Baraja recogida como pequeñas líneas de colores" width="340"> | <img src="images/03-deck-open.png" alt="Baraja de notas abierta en el borde" width="340"> |
+| <img src="images/02-deck-resting.png" alt="Baraja recogida como pequeñas líneas de colores" width="44"> | <img src="images/03-deck-open.png" alt="Baraja de notas abierta en el borde" height="400"> |
 
 - En reposo, cada nota ocupa solamente una pequeña línea de color en el borde.
 - La baraja se puede abrir al pasar el cursor o al hacer clic.
 - Se muestran directamente hasta ocho tarjetas; las notas adicionales siguen disponibles en la biblioteca.
 - Es posible mantener la baraja abierta, cambiar el lado de la pantalla y arrastrar tarjetas para reordenarlas.
 - Cada monitor tiene su propio panel y la aplicación puede estar disponible en todos los Spaces y sobre aplicaciones de pantalla completa.
+
+### Una vista previa que sigue el cursor
+
+| Lado derecho | Lado izquierdo |
+|---|---|
+| <img src="images/12-deck-preview.png" alt="Nota destacada para leer en el lado derecho" width="360"> | <img src="images/13-deck-preview-left.png" alt="Nota destacada para leer en el lado izquierdo" width="360"> |
+
+Al pasar el cursor, la nota se desplaza hacia el interior de la pantalla y muestra una vista previa más amplia. Haz clic para abrir el editor desde esa posición. Las sombras suaves, las tarjetas ligeramente inclinadas y las transiciones coordinadas le dan profundidad a la baraja. Las animaciones respetan la opción **Reducir movimiento** de macOS.
 
 ### Editor flotante y listas de verificación
 
