@@ -190,7 +190,7 @@ La primera compilación descarga Sparkle mediante Swift Package Manager. El paqu
 | Persistencia | Contenedor JSON con cuerpos AES-GCM y una clave guardada en Keychain. |
 | Autenticación | `LocalAuthentication` con la política del propietario del dispositivo. |
 | Inicio automático | `SMAppService.mainApp`; macOS administra la aprobación y el estado. |
-| Actualizaciones | Sparkle 2.9.6; las versiones públicas deben estar firmadas. |
+| Actualizaciones | Sparkle 2.10.1; las versiones públicas deben estar firmadas. |
 | Distribución | Swift Package Manager, paquete `.app`, firma de Apple y archivo ZIP. |
 
 La aplicación usa `LSUIElement`, por lo que funciona como utilidad en segundo plano sin un ícono permanente en el Dock. El código fuente está en [`Sources/SeguraMinhasNotas`](../Sources/SeguraMinhasNotas).
